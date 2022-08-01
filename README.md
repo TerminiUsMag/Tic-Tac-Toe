@@ -1,2 +1,3 @@
 # Tic-Tac-Toe
-A Basic Tic Tac Toe Game
+
+A Basic Console Tic Tac Toe Game written by me in one hour!
