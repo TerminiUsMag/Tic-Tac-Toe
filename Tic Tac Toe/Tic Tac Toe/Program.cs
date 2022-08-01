@@ -23,16 +23,16 @@ namespace Tic_Tac_Toe
             var playGrid = new char[3, 3];
             playGrid = SetPlayGrid(playGrid);
             int turnCounter = 0;
-            NextMove nextMove;
+            NextMove nextToMove;
             while (true)
             {
-                nextMove = DetermineNextTurn(turnCounter);
+                nextToMove = DetermineNextTurn(turnCounter);
                 Console.Clear();
                 Print(playGrid);
                 Console.WriteLine($"\n   RESULT : \n X: {xScore} || O: {oScore}\n");
-                Console.WriteLine($"It is {nextMove}'s turn");
+                Console.WriteLine($"It is {nextToMove}'s turn");
                 int[] nextMoveCoordinates = Input(playGrid);
-                playGrid = MakeAMove(playGrid, nextMoveCoordinates, nextMove);
+                playGrid = MakeAMove(playGrid, nextMoveCoordinates, nextToMove);
                 if (CheckGameStat(playGrid))
                 {
                     Console.WriteLine();
@@ -209,3 +209,10 @@ namespace Tic_Tac_Toe
         }
     }
 }
+
+
+
+
+
+
+//Every Line is Written BY TerminiUsMag!
