@@ -46,7 +46,7 @@ namespace Tic_Tac_Toe
                 turnCounter++;
             }
         }
-        public static void Winner(char winner, char[,] playGrid)
+        private static void Winner(char winner, char[,] playGrid)
         {
             if (winner == 'D')
             {
