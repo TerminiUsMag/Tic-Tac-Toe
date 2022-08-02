@@ -49,7 +49,17 @@ namespace Tic_Tac_Toe
             if (restart == "yes")
                 Run();
             else if (restart == "no")
+            {
+                Console.WriteLine("\nAll time winner is :\n");
+                if(xScore>oScore)
+                    Console.WriteLine("   X");
+                else if(xScore<oScore)
+                    Console.WriteLine("   O");
+                else
+                    Console.WriteLine("   DRAW !");
                 return;
+
+            }
             else
             {
                 Console.WriteLine("Not a valid choice, please try again!\n");
