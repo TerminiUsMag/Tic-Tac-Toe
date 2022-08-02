@@ -35,16 +35,29 @@ namespace Tic_Tac_Toe
                 playGrid = MakeAMove(playGrid, nextMoveCoordinates, nextToMove);
                 if (CheckGameStat(playGrid))
                 {
-                    Console.WriteLine();
-                    Console.WriteLine("Do you want to restart (Yes/No) :");
-                    var restart = Console.ReadLine().ToLower();
-                    if (restart == "yes")
-                        Run();
-                    else
-                        return;
+                    Restart();
+                    return;
                 }
                 turnCounter++;
             }
+        }
+        private static void Restart()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Do you want to restart (Yes/No) :");
+            var restart = Console.ReadLine().ToLower();
+            if (restart == "yes")
+                Run();
+            else if (restart == "no")
+                return;
+            else
+            {
+                Console.WriteLine("Not a valid choice, please try again!\n");
+                Restart();
+                return;
+            }
+
+
         }
         private static void Winner(char winner, char[,] playGrid)
         {
